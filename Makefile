@@ -328,10 +328,10 @@ ifdef GGML_SCHED_MAX_COPIES
 endif
 
 ifdef LLAMA_DEBUG
-	MK_CFLAGS    += -O0 -g
-	MK_CXXFLAGS  += -O0 -g
+	MK_CFLAGS    += -O3 -g
+	MK_CXXFLAGS  += -O3 -g
 	MK_LDFLAGS   += -g
-	MK_NVCCFLAGS += -O0 -g
+	MK_NVCCFLAGS += -O3 -g
 
 	ifeq ($(UNAME_S),Linux)
 		MK_CPPFLAGS += -D_GLIBCXX_ASSERTIONS
